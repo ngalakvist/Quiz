@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MyQuiz.Models.Answer">
+    <Position X="6.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAABAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Answer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyQuiz.Models.AnswerChoice">
+    <Position X="3.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAAQAAAA=</HashCode>
+      <FileName>Models\AnswerChoices.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyQuiz.Models.Question">
+    <Position X="1" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAgAAAAAAAAAAAAAAgQAAAAAQAAAA=</HashCode>
+      <FileName>Models\Question.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyQuiz.Models.Quiz">
+    <Position X="3.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAgAAAAAAAAAIAAgAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Quiz.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyQuiz.Models.QuizContext">
+    <Position X="1" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAkQAAAAAAAAAA=</HashCode>
+      <FileName>Models\QuizContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyQuiz.Models.QuizManager" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAwAAAAAAAAAAACAABAAAAARACAAAAAEAA=</HashCode>
+      <FileName>Models\QuizManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

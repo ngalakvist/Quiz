@@ -1,0 +1,35 @@
+﻿@model MyQuiz.Models.Quiz
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Quiz</legend>
+
+    <div class="display-label">StartTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.StartTime)
+    </div>
+
+    <div class="display-label">Duration</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Duration)
+    </div>
+
+    <div class="display-label">EndTime</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EndTime)
+    </div>
+
+    <div class="display-label">Score</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Score)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.QuizId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

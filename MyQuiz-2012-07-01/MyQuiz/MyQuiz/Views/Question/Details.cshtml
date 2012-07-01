@@ -1,0 +1,25 @@
+﻿@model MyQuiz.Models.Question
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Question</legend>
+
+    <div class="display-label">QuestionText</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.QuestionText)
+    </div>
+
+    <div class="display-label">Answers</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Answers.AnswerText)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.QuestionId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

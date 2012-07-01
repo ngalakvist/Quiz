@@ -1,0 +1,40 @@
+﻿@model MyQuiz.Models.Question
+@{
+    ViewBag.Title = "Index";
+}
+<script type="text/javascript">
+     
+        $("#submitButton").live("click", function () {
+            $.get($(this), function (response) {
+                $("#quiz").replaceWith($("#quiz", response));
+           
+
+            });
+            return false;
+        });
+
+    });
+
+</script>
+<div id="quiz">
+
+    @using (Html.BeginForm("Index", "Home"))
+    { 
+        <fieldset>
+    <legend><h2>@Model.QuestionText</h2></legend>
+        
+        @Html.HiddenFor(x => x.QuestionId)
+
+        <li>
+            @foreach (var choice in Model.AnswerChoices)
+            {
+                <ul>
+                    @Html.RadioButton("answer", @choice.Choices) @choice.Choices
+                </ul>
+            }
+        </li>
+        <input type="submit" value="Next" id="submitButton" />
+ </fieldset>
+    }
+    
+</div>
