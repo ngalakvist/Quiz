@@ -1,169 +1,104 @@
 USE [master]
 GO
-/****** Object:  Database [MyQuiz.Models.QuizContext]    Script Date: 01/17/2013 09:29:51 ******/
-CREATE DATABASE [MyQuiz.Models.QuizContext] ON  PRIMARY 
-( NAME = N'MyQuiz.Models.QuizContext', FILENAME = N'c:\Program Files\Microsoft SQL Server\MSSQL10.SQLEXPRESS\MSSQL\DATA\MyQuiz.Models.QuizContext.mdf' , SIZE = 2304KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+
+/****** Object:  Database [MyQuiz.Models.MyQuizContext]    Script Date: 02/03/2013 14:32:52 ******/
+CREATE DATABASE [MyQuiz.Models.MyQuizContext] ON  PRIMARY 
+( NAME = N'MyQuiz.Models.MyQuizContext', FILENAME = N'D:\Program Files\Microsoft SQL Server\MSSQL10_50.SQLEXPRESS\MSSQL\DATA\MyQuiz.Models.MyQuizContext.mdf' , SIZE = 2304KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
  LOG ON 
-( NAME = N'MyQuiz.Models.QuizContext_log', FILENAME = N'c:\Program Files\Microsoft SQL Server\MSSQL10.SQLEXPRESS\MSSQL\DATA\MyQuiz.Models.QuizContext_log.LDF' , SIZE = 576KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+( NAME = N'MyQuiz.Models.MyQuizContext_log', FILENAME = N'D:\Program Files\Microsoft SQL Server\MSSQL10_50.SQLEXPRESS\MSSQL\DATA\MyQuiz.Models.MyQuizContext_log.LDF' , SIZE = 504KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET COMPATIBILITY_LEVEL = 100
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET COMPATIBILITY_LEVEL = 100
 GO
+
 IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
 begin
-EXEC [MyQuiz.Models.QuizContext].[dbo].[sp_fulltext_database] @action = 'enable'
+EXEC [MyQuiz.Models.MyQuizContext].[dbo].[sp_fulltext_database] @action = 'enable'
 end
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET ANSI_NULL_DEFAULT OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET ANSI_NULL_DEFAULT OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET ANSI_NULLS OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET ANSI_NULLS OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET ANSI_PADDING OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET ANSI_PADDING OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET ANSI_WARNINGS OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET ANSI_WARNINGS OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET ARITHABORT OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET ARITHABORT OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET AUTO_CLOSE ON
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET AUTO_CLOSE ON 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET AUTO_CREATE_STATISTICS ON
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET AUTO_CREATE_STATISTICS ON 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET AUTO_SHRINK OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET AUTO_SHRINK OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET AUTO_UPDATE_STATISTICS ON
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET AUTO_UPDATE_STATISTICS ON 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET CURSOR_CLOSE_ON_COMMIT OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET CURSOR_CLOSE_ON_COMMIT OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET CURSOR_DEFAULT  GLOBAL
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET CURSOR_DEFAULT  GLOBAL 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET CONCAT_NULL_YIELDS_NULL OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET CONCAT_NULL_YIELDS_NULL OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET NUMERIC_ROUNDABORT OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET NUMERIC_ROUNDABORT OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET QUOTED_IDENTIFIER OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET QUOTED_IDENTIFIER OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET RECURSIVE_TRIGGERS OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET RECURSIVE_TRIGGERS OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET  ENABLE_BROKER
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET  ENABLE_BROKER 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET AUTO_UPDATE_STATISTICS_ASYNC OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET DATE_CORRELATION_OPTIMIZATION OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET DATE_CORRELATION_OPTIMIZATION OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET TRUSTWORTHY OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET TRUSTWORTHY OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET ALLOW_SNAPSHOT_ISOLATION OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET ALLOW_SNAPSHOT_ISOLATION OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET PARAMETERIZATION SIMPLE
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET PARAMETERIZATION SIMPLE 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET READ_COMMITTED_SNAPSHOT OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET READ_COMMITTED_SNAPSHOT OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET HONOR_BROKER_PRIORITY OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET HONOR_BROKER_PRIORITY OFF 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET  READ_WRITE
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET  READ_WRITE 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET RECOVERY SIMPLE
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET RECOVERY SIMPLE 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET  MULTI_USER
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET  MULTI_USER 
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET PAGE_VERIFY CHECKSUM
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET PAGE_VERIFY CHECKSUM  
 GO
-ALTER DATABASE [MyQuiz.Models.QuizContext] SET DB_CHAINING OFF
+
+ALTER DATABASE [MyQuiz.Models.MyQuizContext] SET DB_CHAINING OFF 
 GO
-USE [MyQuiz.Models.QuizContext]
-GO
-/****** Object:  Table [dbo].[EdmMetadata]    Script Date: 01/17/2013 09:29:52 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[EdmMetadata](
-  [Id] [int] IDENTITY(1,1) NOT NULL,
-	[ModelHash] [nvarchar](max) NULL,
-PRIMARY KEY CLUSTERED 
-(
-	[Id] ASC
-)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[Answers]    Script Date: 01/17/2013 09:29:52 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Answers](
-	[AnswerId] [int] IDENTITY(1,1) NOT NULL,
-	[AnswerText] [nvarchar](max) NULL,
-PRIMARY KEY CLUSTERED 
-(
-	[AnswerId] ASC
-)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[Quizs]    Script Date: 01/17/2013 09:29:52 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Quizs](
-	[QuizId] [int] IDENTITY(1,1) NOT NULL,
-	[StartTime] [datetime] NULL,
-	[Duration] [time](7) NULL,
-	[EndTime] [datetime] NULL,
-	[Score] [int] NOT NULL,
-PRIMARY KEY CLUSTERED 
-(
-	[QuizId] ASC
-)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[Questions]    Script Date: 01/17/2013 09:29:52 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Questions](
-	[QuestionId] [int] IDENTITY(1,1) NOT NULL,
-	[QuestionText] [nvarchar](max) NULL,
-	[AnswerId] [int] NOT NULL,
-	[Quiz_QuizId] [int] NULL,
-PRIMARY KEY CLUSTERED 
-(
-	[QuestionId] ASC
-)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[AnswerChoices]    Script Date: 01/17/2013 09:29:52 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[AnswerChoices](
-	[AnswerChoiceId] [int] IDENTITY(1,1) NOT NULL,
-	[Choices] [nvarchar](max) NULL,
-	[QuestionId] [int] NOT NULL,
-PRIMARY KEY CLUSTERED 
-(
-	[AnswerChoiceId] ASC
-)WITH (PAD_INDEX  = OFF, STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS  = ON, ALLOW_PAGE_LOCKS  = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-/****** Object:  ForeignKey [Answer_Questions]    Script Date: 01/17/2013 09:29:52 ******/
-ALTER TABLE [dbo].[Questions]  WITH CHECK ADD  CONSTRAINT [Answer_Questions] FOREIGN KEY([AnswerId])
-REFERENCES [dbo].[Answers] ([AnswerId])
-ON DELETE CASCADE
-GO
-ALTER TABLE [dbo].[Questions] CHECK CONSTRAINT [Answer_Questions]
-GO
-/****** Object:  ForeignKey [Quiz_Questions]    Script Date: 01/17/2013 09:29:52 ******/
-ALTER TABLE [dbo].[Questions]  WITH CHECK ADD  CONSTRAINT [Quiz_Questions] FOREIGN KEY([Quiz_QuizId])
-REFERENCES [dbo].[Quizs] ([QuizId])
-GO
-ALTER TABLE [dbo].[Questions] CHECK CONSTRAINT [Quiz_Questions]
-GO
-/****** Object:  ForeignKey [AnswerChoice_Question]    Script Date: 01/17/2013 09:29:52 ******/
-ALTER TABLE [dbo].[AnswerChoices]  WITH CHECK ADD  CONSTRAINT [AnswerChoice_Question] FOREIGN KEY([QuestionId])
-REFERENCES [dbo].[Questions] ([QuestionId])
-ON DELETE CASCADE
-GO
-ALTER TABLE [dbo].[AnswerChoices] CHECK CONSTRAINT [AnswerChoice_Question]
-GO
+
+
